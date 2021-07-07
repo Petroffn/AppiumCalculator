@@ -1,5 +1,6 @@
 import allure
 from appium import webdriver
+from allure_commons.types import Severity
 
 desired_capabilities = {
     "platformName": "iOS",
@@ -9,7 +10,7 @@ desired_capabilities = {
 }
 
 @allure.title('Calc')
-#@allure.severity(Severity.BLOCKER)
+@allure.severity(Severity.BLOCKER)
 
 def test_case01():
     with allure.step('Check value "0,"'):
